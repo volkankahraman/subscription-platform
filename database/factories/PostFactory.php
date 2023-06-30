@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class WebsiteFactory extends Factory
+class PostFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,6 +15,7 @@ class WebsiteFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(4),
+            'description' => $this->faker->paragraph(4),
         ];
     }
 }

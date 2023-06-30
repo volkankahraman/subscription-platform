@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Website;
+use App\Models\PostEmail;
 
-class WebsiteSeeder extends Seeder
+class PostEmailSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +14,6 @@ class WebsiteSeeder extends Seeder
      */
     public function run()
     {
-        Website::factory(10)
-            ->hasSubscriptions(10)
-            ->hasPosts(10)
-            ->create();
+        PostEmail::factory(10)->create();
     }
 }

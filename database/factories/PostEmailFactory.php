@@ -2,9 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Subscription;
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class WebsiteFactory extends Factory
+class PostEmailFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +16,8 @@ class WebsiteFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(4),
+            'subscription_id'=> Subscription::inRandomOrder()->first()->id ?? null,
+            'post_id' => Post::inRandomOrder()->first()->id ?? null,
         ];
     }
 }

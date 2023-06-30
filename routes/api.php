@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function (Request $request) {
+Route::get('/', function () {
     return response()->json(
-        ['message' => "Hello"]
+        ['message' => "Welcome to the Subscription Platform"]
     );
 });
+
+
+Route::resource('websites.posts', PostController::class)->only('store');
+Route::resource('websites.subscriptions', SubscriptionController::class)->only('store');

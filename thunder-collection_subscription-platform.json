@@ -1,0 +1,83 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "subscription-platform",
+    "dateExported": "2023-06-30T22:36:15.354Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "21616f84-53f0-47d2-bd47-9ef135854aca",
+            "name": "Posts",
+            "containerId": "",
+            "created": "2023-06-30T20:21:39.840Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "a7a6f66e-f0c9-4235-8e4a-b6cf10104ff7",
+            "name": "Subscriptions",
+            "containerId": "",
+            "created": "2023-06-30T22:36:09.188Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "8bac3c01-7928-4642-95e8-6a53487de5c5",
+            "colId": "b47f07af-33a8-493d-a670-74d8b06d3420",
+            "containerId": "21616f84-53f0-47d2-bd47-9ef135854aca",
+            "name": "create post",
+            "url": "websites/{website}/posts",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-30T20:21:52.311Z",
+            "modified": "2023-06-30T21:58:59.501Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "website",
+                    "value": "10",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Title Test\",\n  \"description\": \"Description\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c3ec1e35-428e-43b6-ab17-ce0024c8939c",
+            "colId": "b47f07af-33a8-493d-a670-74d8b06d3420",
+            "containerId": "a7a6f66e-f0c9-4235-8e4a-b6cf10104ff7",
+            "name": "create subscription",
+            "url": "websites/10/subscriptions",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-30T21:49:24.880Z",
+            "modified": "2023-06-30T22:08:15.545Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"test@email.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://127.0.0.1:8000/api/"
+        }
+    }
+}
